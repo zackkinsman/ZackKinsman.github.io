@@ -48,7 +48,6 @@
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
-                        <!-- Updated form with adjusted input names -->
                         <form id="contact-form">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
@@ -97,10 +96,10 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-            emailjs.init("3sEs9w3fDrb1JWhTk"); // Replace with your public key from EmailJS
+            emailjs.init("3sEs9w3fDrb1JWhTk");
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
-                emailjs.sendForm('service_zmggjtj', 'template_nlpgmuh', this) // Make sure to replace 'service_zmggjtj' and 'template_nlpgmuh' with your actual service and template IDs
+                emailjs.sendForm('service_zmggjtj', 'template_nlpgmuh', this)
                     .then(function () {
                         alert('Message sent successfully!');
                         document.getElementById('contact-form').reset();
