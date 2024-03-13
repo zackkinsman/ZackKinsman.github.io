@@ -1,0 +1,60 @@
+// Your color palette
+$color1: #F4F1DE;
+$color2: #E07A5F;
+$color3: #3D405B;
+$color4: #81B29A;
+$color5: #F2CC8F;
+
+// Core Customizations
+$primary: $color2;
+$secondary: $color5;
+$success: $color4; 
+$warning: $color5;
+$info: $color3; 
+
+$body-bg: $color1;
+$body-color: $color3; 
+$link-color: $color4;
+$link-hover-color: darken($color4, 10%);
+
+$font-family-sans-serif: 'Arial', sans-serif; // Example, change as desired
+
+// Navigation 
+$nav-link-color: $color3;
+$nav-link-hover-color: $color4;
+
+$navbar-light-color: $color3; 
+$navbar-light-hover-color: $color4; 
+$navbar-light-active-color: $color2;
+
+// Buttons
+$btn-primary-bg: $color2; 
+$btn-primary-border-color: $color2; 
+$btn-primary-color: $color1; 
+$btn-primary-hover-bg: darken($color2, 5%); 
+$btn-primary-hover-border-color: darken($color2, 5%);
+
+// Add other button variations like $btn-secondary-*, $btn-success-* as needed
+
+// Forms
+$input-bg: $color1;
+$input-border-color: $color3;
+$input-focus-border-color: $color4; 
+$input-placeholder-color:  lighten($color3, 20%);
+
+// Cards
+$card-bg: $color1; 
+$card-border-color:  lighten($color3, 10%); 
+$card-cap-bg: $color5;  
+$card-cap-color: $color1;
+
+// Additional Useful Variables
+$text-muted:  lighten($color3, 20%); 
+$border-radius: 0.3rem; // Example, adjust as needed
+
+// Optional Background Utilities
+.bg-soft-primary {
+  background-color:  lighten($color2, 40%) !important;
+}
+// Import Bootstrap’s core
+@import "../node_modules/bootstrap/scss/bootstrap";
