@@ -1,60 +1,54 @@
-// Your color palette
-$color1: #F4F1DE;
-$color2: #E07A5F;
-$color3: #3D405B;
-$color4: #81B29A;
-$color5: #F2CC8F;
+// Your new color palette
+$color1: #023047; // Dark navy for backgrounds or base text
+$color2: #219EBC; // Deep blue for primary elements
+$color3: #FFB703; // Bright yellow for warnings or accents
+$color4: #8ECAE6; // Light blue for information or lighter elements
+$color5: #FB8500; // Deep orange for success or active states
 
 // Core Customizations
 $primary: $color2;
 $secondary: $color5;
-$success: $color4; 
-$warning: $color5;
-$info: $color3; 
+$success: $color5; 
+$warning: $color3;
+$info: $color4; 
 
 $body-bg: $color1;
-$body-color: $color3; 
+$body-color: #FFFFFF; // Assuming a need for contrast, using white for body text
 $link-color: $color4;
 $link-hover-color: darken($color4, 10%);
 
 $font-family-sans-serif: 'Arial', sans-serif;
 
 // Navigation 
-$nav-link-color: $color3;
+$nav-link-color: #FFFFFF; // White for contrast on the dark background
 $nav-link-hover-color: $color4;
 
-$navbar-light-color: $color3; 
+$navbar-light-color: #FFFFFF; // White for visibility
 $navbar-light-hover-color: $color4; 
 $navbar-light-active-color: $color2;
 
 // Buttons
 $btn-primary-bg: $color2; 
 $btn-primary-border-color: $color2; 
-$btn-primary-color: $color1; 
+$btn-primary-color: #FFFFFF; // White text on buttons for readability
 $btn-primary-hover-bg: darken($color2, 5%); 
 $btn-primary-hover-border-color: darken($color2, 5%);
 
-// Add other button variations like $btn-secondary-*, $btn-success-* as needed
-
 // Forms
 $input-bg: $color1;
-$input-border-color: $color3;
+$input-border-color: #FFFFFF; // White borders for contrast
 $input-focus-border-color: $color4; 
-$input-placeholder-color:  lighten($color3, 20%);
+$input-placeholder-color: lighten(#FFFFFF, 20%); // Lighter white for placeholders
 
 // Cards
 $card-bg: $color1; 
-$card-border-color:  lighten($color3, 10%); 
+$card-border-color: lighten(#FFFFFF, 10%); // Lightened white for card borders
 $card-cap-bg: $color5;  
-$card-cap-color: $color1;
+$card-cap-color: #FFFFFF; // White text on card caps for readability
 
 // Additional Useful Variables
-$text-muted:  lighten($color3, 20%); 
-$border-radius: 0.3rem; // Example, adjust as needed
+$text-muted: lighten(#FFFFFF, 20%); // Lighter white for muted text
+$border-radius: 0.3rem;
 
-// Optional Background Utilities
-.bg-soft-primary {
-  background-color:  lighten($color2, 40%) !important;
-}
 // Import Bootstrap’s core
 @import "../node_modules/bootstrap/scss/bootstrap";
