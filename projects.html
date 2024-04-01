@@ -34,10 +34,29 @@
             color: inherit;
             text-decoration: none;
         }
+
+        /* Fixed image size for project cards */
+        .card-img-top {
+            height: 200px;
+            /* Fixed height for all images */
+            object-fit: cover;
+            /* Cover the frame of the container without stretching */
+            width: 100%;
+            /* Ensure the image covers the width */
+        }
+
+        .card-body {
+            padding: 10px 15px;
+        }
+
+        .card-text {
+            font-size: 14px;
+        }
     </style>
+
 </head>
 
-<body class="d-flex flex-column h-100 bg-dark">
+<body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
@@ -57,66 +76,72 @@
             </div>
         </nav>
         <!-- Projects Section-->
-        <section class="py-5 bg-secondary">
+        <section class="py-5" style="background: linear-gradient(to right, #353535, #3C6E71, #284B63);">
             <div class="container px-5 mb-5">
                 <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder text-white">My Projects</h1>
+                    <h1 class="display-5 fw-bolder text-white">Projects</h1>
                 </div>
-                <div class="row gx-5 justify-content-center">
-                    <!-- Project Card 1: BreakSpaceNS.ca-->
-                    <div class="col-lg-11 col-xl-9 col-xxl-8 mb-5">
-                        <a href="http://breakspacens.ca" class="text-decoration-none card-link" target="_blank">
-                            <div class="card h-100 overflow-hidden shadow bg-dark card-hover">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h2 class="card-title fw-bolder text-white">Freelance Web Developer -
-                                                BreakSpaceNS</h2>
-                                            <p class="card-text text-white">Designed and deployed a website using
-                                                Bootstrap, css,
-                                                and html enhancing a local community group’s online presence. This
-                                                project
-                                                required meticulous planning, effective communication with stakeholders
-                                                to understand their needs, and the ability to adapt to feedback during
-                                                the development process.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="assets/BreakSpaceNS.jpg" class="img-fluid w-100 h-75 rounded-start"
-                                            alt="BreakSpaceNS.ca" />
-                                    </div>
+                <!-- Utilizing the grid layout as specified -->
+                <div class="row row-cols-1 row-cols-md-2 gx-5">
+                    <!-- Project Card 1: BreakSpaceNS.ca -->
+                    <div class="col mb-4">
+                        <div class="card h-100 shadow bg-dark card-hover">
+                            <a href="https://breakspacens.ca" class="card-link">
+                                <img src="assets/BreakSpaceNS.jpg" class="card-img-top" alt="BreakSpaceNS.ca">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Freelance Web Developer - BreakSpaceNS</h5>
+                                    <p class="card-text text-white">Designed and deployed a website using Bootstrap,
+                                        CSS,
+                                        and HTML to enhance a local community group’s online presence.</p>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Project Card 2: WPF Media Player with Tag Editing-->
-                    <div class="col-lg-11 col-xl-9 col-xxl-8 mb-5">
-                        <a href="https://github.com/shortword1/Media-Player" class="text-decoration-none card-link"
-                            target="_blank">
-                            <div class="card h-100 overflow-hidden shadow bg-dark card-hover">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h2 class="card-title fw-bolder text-white">WPF Media Player with Tag
-                                                Editing</h2>
-                                            <p class="card-text text-white">Developed a WPF Media Player using C# with
-                                                an intuitive
-                                                XAML interface for audio playback and management. Includes essential
-                                                controls plus a unique tag editing feature for
-                                                updating audio metadata like artist and album info, showcasing my
-                                                expertise in creating accessible desktop applications and media handling
-                                                in C#.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="assets/mediaPlayer.gif" class="img-fluid h-75 w-100 rounded-end"
-                                            alt="WPF Media Player with Tag Editing" />
-                                    </div>
+                    <!-- Project Card 2: WPF Media Player with Tag Editing -->
+                    <div class="col mb-4">
+                        <div class="card h-100 shadow bg-dark card-hover">
+                            <a href="https://github.com/shortword1/Media-Player" class="card-link">
+                                <img src="assets/mediaPlayer.gif" class="card-img-top"
+                                    alt="WPF Media Player with Tag Editing">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">WPF Media Player with Tag Editing</h5>
+                                    <p class="card-text text-white">Developed a WPF Media Player using C# with an
+                                        intuitive
+                                        XAML interface for audio playback and management.</p>
                                 </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3: Calculator Application -->
+                    <div class="col mb-4">
+                        <div class="card h-100 shadow bg-dark card-hover">
+                            <a href="https://github.com/shortword1/Calculator" class="card-link">
+                                <img src="assets/calculator.png" class="card-img-top"
+                                    alt="Calculator Application Preview">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Calculator Application</h5>
+                                    <p class="card-text text-white">A calculator app designed to provide basic
+                                        arithmetic
+                                        functions with a simple, intuitive interface.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project Card 4: Your Next Project -->
+                    <div class="col mb-4">
+                        <div class="card h-100 shadow bg-dark card-hover">
+                            <!-- Assuming no specific link for the placeholder project -->
+                            <img src="assets/RecipeFinder.png" class="card-img-top" alt="Next Project Preview">
+                            <div class="card-body">
+                                <h5 class="card-title text-white">Recipe Finder</h5>
+                                <p class="card-text text-white">A simple python app using a recipe API to find recipes
+                                    based on ingredients you have on hand.
+                                </p>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
     <!-- Footer-->
