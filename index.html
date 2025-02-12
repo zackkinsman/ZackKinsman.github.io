@@ -424,28 +424,27 @@
                   <span class="icon-globe"></span>
                 </div>
                 <h3 class="mb-4">Linkdin</h3>
-                <p><a href="www.linkedin.com/in/zack-kinsman" target="_blank">https://www.linkedin.com/in/zack-kinsman/                </a></p>
+                <p><a href="www.linkedin.com/in/zack-kinsman" target="_blank">https://www.linkedin.com/in/zack-kinsman/
+                  </a></p>
               </div>
             </div>
           </div>
 
           <div class="row no-gutters block-9">
             <div class="col-md-6 order-md-last d-flex">
-              <form action="#" class="bg-light p-4 p-md-5 contact-form">
+              <form id="contact-form" class="bg-light p-4 p-md-5 contact-form">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Name" />
+                  <input type="text" class="form-control" name="from_name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Email" />
+                  <input type="email" class="form-control" name="reply_to" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Subject" />
+                  <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Your Message"
+                    required></textarea>
                 </div>
                 <div class="form-group">
-                  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" />
+                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                 </div>
               </form>
             </div>
@@ -464,8 +463,8 @@
               <div class="ftco-footer-widget mb-4">
                 <h2 class="ftco-heading-2">About</h2>
                 <p>
-                  Dedicated IT professional with a passion for technology, problem solving,
-                  and community-driven collaboration.
+                  Dedicated IT professional with a passion for technology, bouldering,
+                  and collaboration.
                 </p>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                   <li class="ftco-animate">
@@ -566,7 +565,10 @@
         </svg>
       </div>
 
-      <!-- SCRIPTS -->
+      <!-- EmailJS Library (MUST be before scripts.js) -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <!-- Other JS Dependencies -->
       <script src="js/jquery.min.js"></script>
       <script src="js/jquery-migrate-3.0.1.min.js"></script>
       <script src="js/popper.min.js"></script>
@@ -580,6 +582,10 @@
       <script src="js/jquery.animateNumber.min.js"></script>
       <script src="js/scrollax.min.js"></script>
       <script src="js/main.js"></script>
+
+      <!-- Your Custom Script (Must be AFTER email.min.js) -->
+      <script src="js/scripts.js"></script>
+
 </body>
 
 </html>
