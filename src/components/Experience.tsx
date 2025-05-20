@@ -112,7 +112,6 @@ const Experience = () => {
           
           <div className="relative max-w-7xl mx-auto">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-gray-700 transform -translate-x-1/2 z-0"></div>
             
             {experiences.map((exp, index) => (
               <motion.div 

@@ -77,8 +77,10 @@ const Education = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-        >
-          <motion.h2 className="section-title" variants={itemVariants}>
+        >          <motion.h2 
+            className="section-title"
+            variants={itemVariants}
+          >
             Education
           </motion.h2>
           
