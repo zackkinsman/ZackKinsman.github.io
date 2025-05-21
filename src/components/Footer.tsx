@@ -83,7 +83,7 @@ const Footer = () => {
           </p>
           <a 
             href="#home" 
-            className="inline-block text-gray-500 hover:text-secondary text-xs transition-colors mt-2 border-b border-gray-800 hover:border-secondary"
+            className="inline-block text-gray-500 hover:text-secondary text-xs transition-colors mt-2 border-b border-transparent hover:border-secondary"
           >
             Back to Top
           </a>
