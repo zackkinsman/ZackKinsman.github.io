@@ -30,7 +30,7 @@ const Footer = () => {
             className="flex space-x-6 mb-6 md:mb-0"
           >
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/zackkinsman" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors text-xl"
@@ -39,7 +39,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a 
-              href="https://linkedin.com/in/yourusername" 
+              href="https://www.linkedin.com/in/zack-kinsman/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-400 transition-colors text-xl"

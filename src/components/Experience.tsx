@@ -92,7 +92,6 @@ const Experience = () => {
       },
     },
   };
-
   return (
     <section id="experience" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
@@ -103,44 +102,47 @@ const Experience = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           <motion.h2 
-            className="text-4xl font-bold text-center mb-16 text-white relative"
+            className="text-4xl font-bold text-center mb-16 text-white"
             variants={itemVariants}
           >
             Work Experience
-            <div className="absolute w-24 h-1 bg-secondary rounded bottom-0 left-1/2 transform -translate-x-1/2 -bottom-4"></div>
           </motion.h2>
           
-          <div className="relative max-w-7xl mx-auto">
-            {/* Timeline line */}
+          <div className="max-w-4xl mx-auto relative">
+            {/* Vertical timeline line */}
+            <div className="absolute left-[15px] md:left-[24px] top-2 bottom-0 w-1 bg-gray-600 hidden sm:block"></div>
             
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <motion.div 
                 key={exp.id}
-                className={`relative mb-16 ${index % 2 === 0 ? 'md:ml-auto md:mr-[50%] md:pr-16' : 'md:mr-auto md:ml-[50%] md:pl-16'}`}
+                className="relative mb-12"
                 variants={itemVariants}
               >
-                <div className="md:flex md:flex-row-reverse md:justify-start relative">
-                  {/* Content */}
-                  <div className="w-full">
-                    <div className={`p-6 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                      <div className={`flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} justify-between items-start mb-4`}>
-                        <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                <div className="flex">
+                  {/* Timeline marker */}
+                  <div className="hidden sm:flex sm:items-center sm:justify-center min-w-[30px] md:min-w-[50px] h-[30px] md:h-[50px] rounded-full bg-gray-800 border-2 border-secondary z-10 mr-6">
+                    <span className="text-secondary font-bold md:text-lg">{exp.id}</span>
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className="flex-1">
+                    <div className="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-[1.02] border-l-4 border-secondary">
+                      <div className="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
                           <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
                           <p className="text-gray-300 font-medium mb-2">{exp.company}</p>
-                          <div className="space-y-1">
-                            <p className="text-sm text-gray-400">{exp.period}</p>
-                            <p className="text-sm text-gray-400">{exp.location}</p>
-                          </div>
                         </div>
-                        <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 text-secondary border-2 border-secondary">
-                          <span className="font-bold text-lg">{exp.id}</span>
+                        <div className="md:text-right mt-2 md:mt-0">
+                          <p className="text-sm text-gray-400">{exp.period}</p>
+                          <p className="text-sm text-gray-400">{exp.location}</p>
                         </div>
                       </div>
-                      <ul className="mt-4 space-y-2">
+                      
+                      <ul className="mt-4 space-y-3">
                         {exp.responsibilities.map((item, i) => (
-                          <li key={i} className={`flex items-start ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
-                            <span className="text-gray-300 flex-grow">{item}</span>
-                            <span className={`text-secondary ${index % 2 === 0 ? 'ml-2' : 'mr-2'}`}>•</span>
+                          <li key={i} className="flex items-start group">
+                            <span className="text-secondary mr-3 flex-shrink-0 group-hover:text-white transition-colors">•</span>
+                            <span className="text-gray-300 group-hover:text-white transition-colors">{item}</span>
                           </li>
                         ))}
                       </ul>

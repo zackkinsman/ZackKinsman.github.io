@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Education = () => {
+const Education = () => {  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
+  
   const education = [
     {
       id: 1,
@@ -67,18 +67,19 @@ const Education = () => {
       opacity: 1,
       transition: { duration: 0.6 },
     },
-  };
-
+  };  
+  
   return (
     <section id="education" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">        
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-        >          <motion.h2 
-            className="section-title"
+        >          
+          <motion.h2 
+            className="text-4xl font-bold text-center mb-12 text-white" 
             variants={itemVariants}
           >
             Education
@@ -121,8 +122,6 @@ const Education = () => {
               </motion.div>
             ))}
           </div>
-          
-
         </motion.div>
       </div>
     </section>

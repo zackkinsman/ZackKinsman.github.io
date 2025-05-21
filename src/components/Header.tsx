@@ -59,7 +59,7 @@ const Header = () => {
             ))}
             <div className="flex space-x-4 ml-6">
               <motion.a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/zackkinsman" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
@@ -68,7 +68,7 @@ const Header = () => {
                 <FontAwesomeIcon icon={faGithub} size="lg" />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/zack-kinsman/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
@@ -109,14 +109,14 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex space-x-6 pt-2">
-                <a                href="https://github.com/yourusername" 
+                <a href="https://github.com/zackkinsman" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-secondary"
                 >
                   <FontAwesomeIcon icon={faGithub} size="lg" />
                 </a>
-                <a                href="https://linkedin.com/in/yourusername" 
+                <a href="https://www.linkedin.com/in/zack-kinsman/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-secondary"
