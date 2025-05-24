@@ -4,5 +4,19 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './' // Ensure assets are loaded with relative paths
+  base: './', // Ensure assets are loaded with relative paths
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+    assetsDir: 'assets',
+    outDir: 'dist',
+  },
+  server: {
+    fs: {
+      strict: false
+    }
+  }
 })
